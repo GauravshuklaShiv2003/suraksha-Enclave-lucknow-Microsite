@@ -1,0 +1,23 @@
+/* frontend/src/index.css - Updated Full Width Reset */
+
+:root {
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
+
+/* Vite ke default restrictions ko hata diya gaya hai */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none; /* Boxed layout ko todne ke liye */
+  text-align: left; /* Default center alignment hatane ke liye */
+}
