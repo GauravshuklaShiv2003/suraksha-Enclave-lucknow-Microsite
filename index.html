@@ -3,327 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraksha Enclave Lucknow | Premium Township</title>
+    <title>Suraksha Enclave Jattari | Premium Township</title>
+    
     <!-- Google Fonts for Premium Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* --- Color Palette & Variables --- */
-        :root {
-            --primary-navy: #152238; /* Deep Navy Blue */
-            --accent-gold: #d4af37;  /* Premium Gold */
-            --bg-light: #f9f9f9;
-            --text-dark: #333333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* --- Navbar Section --- */
-        .navbar {
-            background-color: var(--primary-navy);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--accent-gold);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar-brand {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .navbar-brand span {
-            color: var(--accent-gold);
-        }
-
-        .navbar-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .navbar-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .btn-gold {
-            background-color: var(--accent-gold);
-            color: var(--primary-navy);
-            padding: 10px 24px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-gold:hover {
-            background-color: #bfa030;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background-color: var(--primary-navy);
-            color: white;
-            padding: 80px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-        .hero h1 {
-            color: var(--accent-gold);
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: 20px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            font-size: 16px;
-            margin-bottom: 30px;
-            color: #d1d5db;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .hero-buttons .btn-outline {
-            background: transparent;
-            border: 2px solid var(--accent-gold);
-            color: var(--accent-gold);
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .hero-image {
-            flex: 1;
-            height: 300px;
-            background: #1e2d4a;
-            border: 2px dashed var(--accent-gold);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9ca3af;
-        }
-
-        /* --- Why Suraksha Enclave Section --- */
-        .features-section {
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .features-section h2 {
-            font-size: 32px;
-            color: var(--primary-navy);
-            margin-bottom: 40px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-gold);
-        }
-
-        .feature-image {
-            height: 180px;
-            background-color: #e5e7eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9ca3af;
-        }
-
-        .feature-card h3 {
-            padding: 20px;
-            font-size: 18px;
-            color: var(--primary-navy);
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        /* --- Location Section --- */
-        .location-section {
-            padding: 60px 5%;
-            background-color: white;
-            text-align: center;
-        }
-
-        .location-section h2 {
-            font-size: 32px;
-            color: var(--primary-navy);
-            margin-bottom: 20px;
-        }
-
-        .location-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            text-align: left;
-            margin-top: 40px;
-            align-items: center;
-        }
-
-        .location-map {
-            flex: 1;
-            min-width: 300px;
-            background: #e5e7eb;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--accent-gold);
-            border-radius: 8px;
-            color: #9ca3af;
-        }
-
-        .location-details {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .location-details ul {
-            list-style-type: none;
-        }
-
-        .location-details li {
-            font-size: 16px;
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .location-details li::before {
-            content: "📍";
-            position: absolute;
-            left: 0;
-        }
-
-        /* --- Pricing Section --- */
-        .pricing-section {
-            padding: 60px 5%;
-            background-color: var(--bg-light);
-            text-align: center;
-        }
-
-        .pricing-section h2 {
-            font-size: 32px;
-            color: var(--primary-navy);
-            margin-bottom: 40px;
-        }
-
-        .pricing-card {
-            background: var(--primary-navy);
-            color: white;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 8px;
-            border-top: 5px solid var(--accent-gold);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-
-        .pricing-card h3 {
-            color: var(--accent-gold);
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .pricing-card .price {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        /* --- Contact Section --- */
-        .contact-section {
-            padding: 60px 5%;
-            background-color: white;
-            text-align: center;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 30px auto 0;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--primary-navy);
-            color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-            border-top: 3px solid var(--accent-gold);
-        }
-    </style>
+    
+    <!-- External CSS File Linked Here -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -339,21 +25,22 @@
             <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
         </div>
-        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView();">Contact Us</button>
+        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact Us</button>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="overview">
         <div class="hero-content">
-            <h1>Suraksha Enclave Lucknow</h1>
+            <h1>Suraksha Enclave Jattari</h1>
             <h2>A Premium Township Experience</h2>
-            <p>Welcome to Suraksha Enclave Lucknow by NewCastle Infratech Pvt. Ltd. Experience the perfect blend of modern infrastructure, prime connectivity, and premium security. Featuring thoughtfully designed layouts and a grand entry, this development is crafted for your ultimate lifestyle and future.</p>
+            <p>Welcome to Suraksha Enclave at Jattari by NewCastle Infratech Pvt. Ltd. Experience the perfect blend of modern infrastructure, prime connectivity near the upcoming Jewar region, and premium security. Featuring thoughtfully designed layouts and a grand iron gate entry, this development is crafted for your ultimate lifestyle and future.</p>
             <div class="hero-buttons">
                 <button class="btn-gold">Book A Visit</button>
                 <button class="btn-outline">Call Now</button>
             </div>
         </div>
         <div class="hero-image">
+            <!-- Upload your iron gate render here later -->
             [Render: Iron Gate / Site Front View]
         </div>
     </section>
@@ -399,8 +86,8 @@
             </div>
             <div class="location-details">
                 <ul>
-                    <li>Direct connectivity to major transport corridors and highways</li>
-                    <li>Close proximity to key commercial and industrial hubs</li>
+                    <li>Direct connectivity to the upcoming Jewar International Airport</li>
+                    <li>Close proximity to key commercial and industrial hubs along Yamuna Expressway</li>
                     <li>Surrounded by top educational institutions and healthcare facilities</li>
                     <li>Modern, well-planned infrastructure ensuring safe and peaceful living</li>
                 </ul>
@@ -424,7 +111,7 @@
     <section class="contact-section" id="contact">
         <h2>Get In Touch</h2>
         <p>Looking for the right opportunity? Our NewCastle Infratech team is here to assist you.</p>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+        <form class="contact-form" id="leadForm">
             <input type="text" placeholder="Your Name*" required>
             <input type="email" placeholder="Your Email*" required>
             <input type="tel" placeholder="Mobile Number*" required>
@@ -437,6 +124,43 @@
     <footer>
         <p>&copy; 2026 NewCastle Infratech Pvt. Ltd. | All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Smooth Scrolling for Navbar Links
+        document.querySelectorAll('.navbar-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70, // Adjust for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission Handler
+        const contactForm = document.getElementById('leadForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                
+                // Fetch values
+                const name = this.querySelector('input[type="text"]').value;
+                const phone = this.querySelector('input[type="tel"]').value;
+                
+                // Show Success Message
+                alert(`Thank you, ${name}! Your details have been submitted. The NewCastle Infratech team will contact you at ${phone} soon.`);
+                
+                // Reset form
+                this.reset();
+            });
+        }
+    </script>
 
 </body>
 </html>
