@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraksha Enclave Jattari | Premium Township</title>
+    <title>Suraksha Enclave Lucknow | Premium Township</title>
     <!-- Google Fonts for Premium Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Exact Color Palette from Reference */
+        /* --- Color Palette & Variables --- */
         :root {
             --primary-navy: #152238; /* Deep Navy Blue */
             --accent-gold: #d4af37;  /* Premium Gold */
@@ -25,6 +25,7 @@
             font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
+            line-height: 1.6;
         }
 
         h1, h2, h3 {
@@ -89,10 +90,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 30px;
         }
 
         .hero-content {
-            max-width: 50%;
+            flex: 1;
         }
 
         .hero h1 {
@@ -110,9 +112,13 @@
 
         .hero p {
             font-size: 16px;
-            line-height: 1.6;
             margin-bottom: 30px;
             color: #d1d5db;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
         }
 
         .hero-buttons .btn-outline {
@@ -123,7 +129,18 @@
             border-radius: 4px;
             font-weight: bold;
             cursor: pointer;
-            margin-left: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            height: 300px;
+            background: #1e2d4a;
+            border: 2px dashed var(--accent-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
         }
 
         /* --- Why Suraksha Enclave Section --- */
@@ -140,7 +157,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -150,7 +167,7 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            transition: transform 0.3s, border-color 0.3s;
         }
 
         .feature-card:hover {
@@ -161,7 +178,6 @@
         .feature-image {
             height: 180px;
             background-color: #e5e7eb;
-            /* Yahan aap apni images ka path daal sakte hain (e.g., assets/images/gate.jpg) */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -175,13 +191,135 @@
             font-family: 'Open Sans', sans-serif;
         }
 
+        /* --- Location Section --- */
+        .location-section {
+            padding: 60px 5%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .location-section h2 {
+            font-size: 32px;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+        }
+
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: left;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .location-map {
+            flex: 1;
+            min-width: 300px;
+            background: #e5e7eb;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            color: #9ca3af;
+        }
+
+        .location-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .location-details ul {
+            list-style-type: none;
+        }
+
+        .location-details li {
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .location-details li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- Pricing Section --- */
+        .pricing-section {
+            padding: 60px 5%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .pricing-section h2 {
+            font-size: 32px;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: var(--primary-navy);
+            color: white;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 5px solid var(--accent-gold);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card h3 {
+            color: var(--accent-gold);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            padding: 60px 5%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+        }
+
         /* --- Footer --- */
         footer {
             background-color: var(--primary-navy);
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 40px;
             font-size: 14px;
             border-top: 3px solid var(--accent-gold);
         }
@@ -189,39 +327,39 @@
 </head>
 <body>
 
-    <!-- Navbar Layout -->
+    <!-- Header / Navbar Section -->
     <nav class="navbar">
         <div class="navbar-brand">
             SURAKSHA <span>ENCLAVE</span>
         </div>
         <div class="navbar-links">
-            <a href="#">Overview</a>
-            <a href="#">Amenities</a>
-            <a href="#">Highlights</a>
-            <a href="#">Pricing</a>
-            <a href="#">Gallery</a>
+            <a href="#overview">Overview</a>
+            <a href="#why-us">Amenities</a>
+            <a href="#location">Location</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
         </div>
-        <button class="btn-gold">Contact Us</button>
+        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView();">Contact Us</button>
     </nav>
 
-    <!-- Hero Section Design -->
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
         <div class="hero-content">
-            <h1>Suraksha Enclave Jattari</h1>
+            <h1>Suraksha Enclave Lucknow</h1>
             <h2>A Premium Township Experience</h2>
-            <p>Discover Suraksha Enclave at Jattari—an exclusive, gated plotted township designed for modern living, strategic connectivity, and exponential future growth near the upcoming Jewar region.</p>
+            <p>Welcome to Suraksha Enclave Lucknow by NewCastle Infratech Pvt. Ltd. Experience the perfect blend of modern infrastructure, prime connectivity, and premium security. Featuring thoughtfully designed layouts and a grand entry, this development is crafted for your ultimate lifestyle and future.</p>
             <div class="hero-buttons">
                 <button class="btn-gold">Book A Visit</button>
                 <button class="btn-outline">Call Now</button>
             </div>
         </div>
         <div class="hero-image">
-            <!-- Space for hero background graphic or iron gate render -->
+            [Render: Iron Gate / Site Front View]
         </div>
     </section>
 
-    <!-- Grid Section (Why Suraksha Enclave) -->
-    <section class="features-section">
+    <!-- Features Section (Why Suraksha Enclave) -->
+    <section class="features-section" id="why-us">
         <h2>Why Suraksha Enclave?</h2>
         <div class="features-grid">
             <div class="feature-card">
@@ -233,7 +371,7 @@
                 <h3>High Appreciation Potential</h3>
             </div>
             <div class="feature-card">
-                <div class="feature-image">[Image: Connectivity]</div>
+                <div class="feature-image">[Image: Prime Connectivity]</div>
                 <h3>Prime Connectivity</h3>
             </div>
             <div class="feature-card">
@@ -241,17 +379,61 @@
                 <h3>Wide Roads</h3>
             </div>
             <div class="feature-card">
-                <div class="feature-image">[Image: Environment]</div>
+                <div class="feature-image">[Image: Perfect Environment]</div>
                 <h3>Perfect Environment</h3>
             </div>
             <div class="feature-card">
-                <div class="feature-image">[Image: Investment]</div>
+                <div class="feature-image">[Image: Investment Friendly]</div>
                 <h3>Investment Friendly</h3>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Location & Connectivity Section -->
+    <section class="location-section" id="location">
+        <h2>Location & Connectivity</h2>
+        <p>Strategically positioned for exponential growth and seamless connectivity.</p>
+        <div class="location-content">
+            <div class="location-map">
+                [Space for Google Map iframe or Master Plan Layout]
+            </div>
+            <div class="location-details">
+                <ul>
+                    <li>Direct connectivity to major transport corridors and highways</li>
+                    <li>Close proximity to key commercial and industrial hubs</li>
+                    <li>Surrounded by top educational institutions and healthcare facilities</li>
+                    <li>Modern, well-planned infrastructure ensuring safe and peaceful living</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-card">
+            <h3>Premium Residential Plots</h3>
+            <p>A smart investment for a promising future.</p>
+            <div class="price">₹42,500 <span style="font-size: 16px; font-weight: normal;">/ sq. yd.</span></div>
+            <p style="margin-bottom: 20px; font-size: 14px; color: #d1d5db;">* Bank Loan Approved | Limited Inventory Available</p>
+            <button class="btn-gold" style="width: 100%;">Request Price Sheet</button>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact">
+        <h2>Get In Touch</h2>
+        <p>Looking for the right opportunity? Our NewCastle Infratech team is here to assist you.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+            <input type="text" placeholder="Your Name*" required>
+            <input type="email" placeholder="Your Email*" required>
+            <input type="tel" placeholder="Mobile Number*" required>
+            <textarea rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit" class="btn-gold">Submit Details</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2026 NewCastle Infratech Pvt. Ltd. | All Rights Reserved.</p>
     </footer>
