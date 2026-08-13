@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Enclave Jattari | Premium Township</title>
+    <!-- Google Fonts for Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Exact Color Palette from Reference */
+        :root {
+            --primary-navy: #152238; /* Deep Navy Blue */
+            --accent-gold: #d4af37;  /* Premium Gold */
+            --bg-light: #f9f9f9;
+            --text-dark: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Navbar Section --- */
+        .navbar {
+            background-color: var(--primary-navy);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-brand span {
+            color: var(--accent-gold);
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--primary-navy);
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-gold:hover {
+            background-color: #bfa030;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            color: var(--accent-gold);
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #d1d5db;
+        }
+
+        .hero-buttons .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        /* --- Why Suraksha Enclave Section --- */
+        .features-section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            font-size: 32px;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-image {
+            height: 180px;
+            background-color: #e5e7eb;
+            /* Yahan aap apni images ka path daal sakte hain (e.g., assets/images/gate.jpg) */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+        }
+
+        .feature-card h3 {
+            padding: 20px;
+            font-size: 18px;
+            color: var(--primary-navy);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 14px;
+            border-top: 3px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Layout -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            SURAKSHA <span>ENCLAVE</span>
+        </div>
+        <div class="navbar-links">
+            <a href="#">Overview</a>
+            <a href="#">Amenities</a>
+            <a href="#">Highlights</a>
+            <a href="#">Pricing</a>
+            <a href="#">Gallery</a>
+        </div>
+        <button class="btn-gold">Contact Us</button>
+    </nav>
+
+    <!-- Hero Section Design -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Suraksha Enclave Jattari</h1>
+            <h2>A Premium Township Experience</h2>
+            <p>Discover Suraksha Enclave at Jattari—an exclusive, gated plotted township designed for modern living, strategic connectivity, and exponential future growth near the upcoming Jewar region.</p>
+            <div class="hero-buttons">
+                <button class="btn-gold">Book A Visit</button>
+                <button class="btn-outline">Call Now</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Space for hero background graphic or iron gate render -->
+        </div>
+    </section>
+
+    <!-- Grid Section (Why Suraksha Enclave) -->
+    <section class="features-section">
+        <h2>Why Suraksha Enclave?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-image">[Image: Gated Township]</div>
+                <h3>Gated Township</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">[Image: High Appreciation]</div>
+                <h3>High Appreciation Potential</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">[Image: Connectivity]</div>
+                <h3>Prime Connectivity</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">[Image: Wide Roads]</div>
+                <h3>Wide Roads</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">[Image: Environment]</div>
+                <h3>Perfect Environment</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">[Image: Investment]</div>
+                <h3>Investment Friendly</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 NewCastle Infratech Pvt. Ltd. | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
