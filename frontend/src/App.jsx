@@ -94,7 +94,7 @@ function App() {
           </div>
         </div>
         <div className="hero-image reveal delay-1" ref={addToRefs}>
-          <img src="/images/iron-gate.jpg" alt="Majestic Iron Gate Entry" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
+          <img src="/images/iron-gate.jpg" alt="Majestic iron gate entry" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }} />
         </div>
       </section>
 
@@ -107,7 +107,7 @@ function App() {
         </div>
       </section>
 
-      {/* 4. VIDEO WALKTHROUGH (NEW) */}
+      {/* 4. VIDEO WALKTHROUGH */}
       <section className="video-section reveal" ref={addToRefs}>
         <div className="section-container">
           <h2>Project Walkthrough</h2>
@@ -191,7 +191,7 @@ function App() {
         </div>
       </section>
 
-      {/* 9. FAQs (NEW) */}
+      {/* 9. FAQs */}
       <section className="faq-section reveal" ref={addToRefs}>
         <h2>Frequently Asked Questions</h2>
         <div className="divider"></div>
