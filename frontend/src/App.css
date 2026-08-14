@@ -24,7 +24,7 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
-/* --- Reveal Animations (Premium Effect) --- */
+/* --- Reveal Animations --- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);

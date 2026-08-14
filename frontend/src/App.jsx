@@ -6,7 +6,7 @@ function App() {
   const [status, setStatus] = useState('');
   const [activeFAQ, setActiveFAQ] = useState(null);
 
-  // Scroll Animation Logic (Intersection Observer)
+  // Scroll Animation Logic
   const revealRefs = useRef([]);
   revealRefs.current = [];
 
@@ -53,11 +53,10 @@ function App() {
         setStatus('Something went wrong. Please try again.');
       }
     } catch (error) {
-      setStatus('Error connecting to the server.');
+      setStatus('Error connecting to the server. Please check if the backend is running.');
     }
   };
 
-  // FAQ Data
   const faqs = [
     { question: "Is Suraksha Enclave a gated community?", answer: "Yes, it features a highly secure gated masterplan with a majestic iron gate entry and 24/7 security." },
     { question: "How far is the Jewar International Airport?", answer: "The project is strategically located in Jattari, offering seamless and direct connectivity to the upcoming Jewar International Airport." },
@@ -67,7 +66,7 @@ function App() {
   return (
     <div className="app-container">
       
-      {/* 1. GLASSMORPHISM NAVBAR */}
+      {/* NAVBAR */}
       <nav className="navbar">
         <div className="navbar-brand">SURAKSHA <span>ENCLAVE</span></div>
         <div className="navbar-links">
@@ -82,7 +81,7 @@ function App() {
         </button>
       </nav>
 
-      {/* 2. HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="hero" id="overview">
         <div className="hero-content reveal" ref={addToRefs}>
           <h1>Suraksha Enclave Jattari</h1>
@@ -98,7 +97,7 @@ function App() {
         </div>
       </section>
 
-      {/* 3. ABOUT SECTION */}
+      {/* ABOUT SECTION */}
       <section className="about-section reveal" ref={addToRefs}>
         <div className="section-container">
           <h2>The Vision of NewCastle Infratech</h2>
@@ -107,7 +106,7 @@ function App() {
         </div>
       </section>
 
-      {/* 4. VIDEO WALKTHROUGH */}
+      {/* VIDEO WALKTHROUGH */}
       <section className="video-section reveal" ref={addToRefs}>
         <div className="section-container">
           <h2>Project Walkthrough</h2>
@@ -119,7 +118,7 @@ function App() {
         </div>
       </section>
 
-      {/* 5. MASTER PLAN & LAYOUT */}
+      {/* MASTER PLAN */}
       <section className="masterplan-section" id="masterplan">
         <h2 className="reveal" ref={addToRefs}>Architectural Master Plan</h2>
         <div className="divider reveal" ref={addToRefs}></div>
@@ -138,7 +137,7 @@ function App() {
         </div>
       </section>
 
-      {/* 6. AMENITIES SECTION */}
+      {/* AMENITIES */}
       <section className="features-section">
         <h2 className="reveal" ref={addToRefs}>World-Class Amenities</h2>
         <div className="divider reveal" ref={addToRefs}></div>
@@ -152,7 +151,7 @@ function App() {
         </div>
       </section>
 
-      {/* 7. GALLERY */}
+      {/* GALLERY */}
       <section className="gallery-section" id="gallery">
         <h2 className="reveal" ref={addToRefs}>Project Highlights & Renders</h2>
         <div className="divider reveal" ref={addToRefs}></div>
@@ -169,7 +168,7 @@ function App() {
         </div>
       </section>
 
-      {/* 8. LOCATION SECTION */}
+      {/* LOCATION */}
       <section className="location-section" id="location">
         <h2 className="reveal" ref={addToRefs}>Location & Connectivity</h2>
         <div className="divider reveal" ref={addToRefs}></div>
@@ -191,7 +190,7 @@ function App() {
         </div>
       </section>
 
-      {/* 9. FAQs */}
+      {/* FAQs */}
       <section className="faq-section reveal" ref={addToRefs}>
         <h2>Frequently Asked Questions</h2>
         <div className="divider"></div>
@@ -210,7 +209,7 @@ function App() {
         </div>
       </section>
 
-      {/* 10. PRICING SECTION */}
+      {/* PRICING */}
       <section className="pricing-section reveal" ref={addToRefs}>
         <h2>Pricing Plans</h2>
         <div className="divider"></div>
@@ -222,11 +221,11 @@ function App() {
         </div>
       </section>
 
-      {/* 11. API INTEGRATED CONTACT FORM */}
+      {/* API INTEGRATED CONTACT FORM */}
       <section className="contact-section reveal" id="contact" ref={addToRefs}>
         <h2>Get In Touch</h2>
         <div className="divider"></div>
-        <p>Schedule a site visit or technical pre-assessment.</p>
+        <p>Schedule a site visit or register for the technical pre-assessment scheduled for January 16.</p>
         <form className="contact-form" onSubmit={submitLead}>
           <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name*" required />
           <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Your Email*" required />
@@ -237,7 +236,7 @@ function App() {
         </form>
       </section>
 
-      {/* 12. FOOTER */}
+      {/* FOOTER */}
       <footer>
         <p>&copy; 2026 NewCastle Infratech Pvt. Ltd. | All Rights Reserved.</p>
       </footer>
